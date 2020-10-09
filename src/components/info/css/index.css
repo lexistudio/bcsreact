@@ -1,0 +1,41 @@
+.info {
+  display: flex;
+  padding: 47px 0 0;
+}
+
+.info__item {
+  flex: 1;
+  max-width: 276px;
+  position: relative;
+  margin-left: 95px;
+}
+
+.info__item:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -70px;
+  width: 1px;
+  height: 48px;
+  background: #D2D6D9;
+}
+
+.info__item:first-child {
+  flex: 1;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.info__item:first-child:before {
+  display: none;
+}
+
+.info__icon {
+  margin-bottom: 9px;
+}
+
+.info__title {
+  font-size: 16px;
+  line-height: 1.25;
+}

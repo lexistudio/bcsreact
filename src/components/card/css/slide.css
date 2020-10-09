@@ -1,0 +1,21 @@
+.swiper-slide.active {
+  background: #e1e1e1;
+}
+
+.swiper-slide {
+  position: relative;
+  padding-bottom: 152px;
+  transition: background .2s;
+}
+
+.swiper-slide-orange {
+  background: #F18E4B;
+}
+
+.swiper-slide-black {
+  background: #3E4348;
+}
+
+.swiper-slide-green {
+  background: #53B56C;
+}

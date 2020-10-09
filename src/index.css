@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Suisse Int";
+  font-display: swap;
+  src: url("/assets/fnt/suisseIntl/regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Suisse Int";
+  font-display: swap;
+  src: url("/assets/fnt/suisseIntl/regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Suisse Int";
+  font-display: swap;
+  src: url("/assets/fnt/suisseIntl/medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+
+body {
+  margin: 0;
+  font-family: "Suisse Int";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #000;
+}
+
+.container {
+  width: 1472px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.title {
+  padding-top: 104px;
+  margin: 0;
+  font-size: 44px;
+  line-height: 1;
+  font-weight: 600;
+}

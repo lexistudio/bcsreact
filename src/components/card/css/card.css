@@ -1,0 +1,110 @@
+.card-title {
+  max-width: 400px;
+}
+
+.card {
+  color: #fff;
+  margin: 32px 0;
+}
+
+.card__body {
+  padding: 34px 32px;
+  position: relative;
+}
+
+.card__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.1;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+
+.card__icon {
+  width: 56px;
+  height: 56px;
+  background: #fff;
+  border-radius: 100%;
+  position: absolute;
+  top: 32px;
+  right: 32px;
+}
+
+.card__icon:before,
+.card__icon:after {
+  content: '';
+  display: block;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 56px;
+  height: 56px;
+  background: #fff;
+}
+
+.card__icon:before{
+  margin-left: -16px;
+  opacity: .3;
+}
+
+.card__icon:after{
+  margin-left: -8px;
+  opacity: .4;
+}
+
+.card__group {
+  display: flex;
+  margin-top: 64px;
+}
+
+.card__group_item {
+  width: 100%;
+  max-width: 200px;
+}
+
+.card__group_title {
+  font-size: 20px;
+  line-height: 1.1;
+  letter-spacing: .2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.card__group_subTitle {
+  font-size: 12px;
+  line-height: 1.3;
+  letter-spacing: .2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 6px 0 16px;
+}
+
+.card__result {
+  height: 152px;
+  background: linear-gradient(90deg, transparent 30%, rgba(255,255,255,.1) 50%, rgba(255,255,255,.5) 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 0 32px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card__result_title {
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.card__result_subtitle {
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 1.3;
+  letter-spacing: .2px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
