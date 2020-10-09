@@ -16,7 +16,7 @@ class CardWrap extends React.Component {
         id: 1,
         name: 'защищённые<br>инвестиции в Alibaba',
         filter: 'one',
-        icon: 'icon',
+        icon: 'alibaba',
         color: 'swiper-slide-orange',
         price: [
           { id: 1, name: '3 мес.', subName: 'срок<br>размещения' },
@@ -28,7 +28,7 @@ class CardWrap extends React.Component {
         id: 2,
         name: 'Нота №81<br>«Мультибарьер»',
         filter: 'two',
-        icon: 'icon',
+        icon: 'multi',
         color: 'swiper-slide-black',
         price: [
           { id: 1, name: 'от 1 250 $', subName: 'минимальная<br>сумма' },
@@ -40,7 +40,7 @@ class CardWrap extends React.Component {
         id: 3,
         name: 'защищённые<br>инвестиции в сбербанк',
         filter: 'three',
-        icon: 'icon',
+        icon: 'sber',
         color: 'swiper-slide-green',
         price: [
           { id: 1, name: '3 мес.', subName: 'срок<br>размещения' },
@@ -78,7 +78,9 @@ class CardWrap extends React.Component {
               <SwiperSlide key={arg.id} className={arg.filter === this.state.filter ? 'active' : arg.color}>
                 <div className="card__body">
                   <div className="card__title" dangerouslySetInnerHTML={{__html:arg.name}}></div>
-                  <div className="card__icon">{arg.icon}</div>
+                  <div className="card__icon">
+                    <img src={`/assets/img/${arg.icon}.svg`} alt={arg.name} />
+                  </div>
                   <div className="card__group">
                     { arg.price.map(el => (
                       <div key={el.id} className="card__group_item">
