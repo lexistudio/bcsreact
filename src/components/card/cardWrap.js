@@ -1,4 +1,5 @@
 import React from 'react'
+import SwiperCore, { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 // CSS
@@ -6,6 +7,8 @@ import 'swiper/swiper-bundle.min.css'
 import './css/tab.css'
 import './css/card.css'
 import './css/slide.css'
+
+SwiperCore.use([Pagination]);
 
 class CardWrap extends React.Component {
   constructor(props) {
@@ -19,8 +22,8 @@ class CardWrap extends React.Component {
         icon: 'alibaba',
         color: 'swiper-slide-orange',
         price: [
-          { id: 1, name: '3 мес.', subName: 'срок<br>размещения' },
-          { id: 2, name: 'от 300 000 ₽', subName: 'минимальная<br>сумма' },
+          { id: 1, name: '3 мес.', subName: 'срок размещения' },
+          { id: 2, name: 'от 300 000 ₽', subName: 'минимальная сумма' },
         ],
         result: 10
       },
@@ -31,8 +34,8 @@ class CardWrap extends React.Component {
         icon: 'multi',
         color: 'swiper-slide-black',
         price: [
-          { id: 1, name: 'от 1 250 $', subName: 'минимальная<br>сумма' },
-          { id: 2, name: '5 лет', subName: 'срок<br>размещения' },
+          { id: 1, name: 'от 1 250 $', subName: 'минимальная сумма' },
+          { id: 2, name: '5 лет', subName: 'срок размещения' },
         ],
         result: 15
       },
@@ -43,8 +46,8 @@ class CardWrap extends React.Component {
         icon: 'sber',
         color: 'swiper-slide-green',
         price: [
-          { id: 1, name: '3 мес.', subName: 'срок<br>размещения' },
-          { id: 2, name: 'от 300 000 ₽', subName: 'минимальная<br>сумма' },
+          { id: 1, name: '3 мес.', subName: 'срок размещения' },
+          { id: 2, name: 'от 300 000 ₽', subName: 'минимальная сумма' },
         ],
         result: 10
       }
@@ -73,7 +76,24 @@ class CardWrap extends React.Component {
         </div>
 
         <div className="card">
-          <Swiper slidesPerView={3} spaceBetween={16}>
+          <Swiper
+            loop={true}
+            breakpoints={{
+              1400: {
+                slidesPerView: 3,
+                spaceBetween: 16
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 16
+              },
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 6
+              }
+            }}
+            pagination={{ el: '.pagination', clickable: true }}
+          >
             {this.sl.map(arg => (
               <SwiperSlide key={arg.id} className={arg.filter === this.state.filter ? 'active' : arg.color}>
                 <div className="card__body">
@@ -85,7 +105,7 @@ class CardWrap extends React.Component {
                     { arg.price.map(el => (
                       <div key={el.id} className="card__group_item">
                         <div className="card__group_title">{el.name}</div>
-                        <div className="card__group_subTitle" dangerouslySetInnerHTML={{__html:el.subName}}></div>
+                        <div className="card__group_subTitle">{el.subName}</div>
                       </div>
                     ))}
                   </div>
@@ -96,6 +116,7 @@ class CardWrap extends React.Component {
                 </div>
               </SwiperSlide>
             ))}
+            <div className="pagination"></div>
           </Swiper>
         </div>
       </section>

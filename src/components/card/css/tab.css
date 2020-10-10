@@ -23,6 +23,10 @@
   transition: box-shadow .1s linear, background .2s linear, border .2s linear;
 }
 
+.tab__item:first-child {
+  margin-left: 0;
+}
+
 .tab__item:hover {
   box-shadow: 0 10px 20px rgba(0,0,0,.1)
 }
@@ -30,4 +34,38 @@
 .tab__item.active {
   background: #E7EBEE;
   border-color: #E7EBEE;
+}
+
+@media screen and (max-width: 1400px) {
+  .tab {
+    justify-content: flex-start;
+    margin-top: 23px;
+  }
+
+  .tab__item {
+    padding: 0 20px;
+    font-size: 11px;
+    line-height: 51px;
+    height: 48px;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .tab {
+    margin-top: 23px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tab__item {
+    display: inline-block;
+    font-size: 9px;
+    line-height: 44px;
+    height: 40px;
+    margin-left: 12px;
+  }
 }
